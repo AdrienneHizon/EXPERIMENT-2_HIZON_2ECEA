@@ -8,7 +8,13 @@ Normalization is important in data analysis. Therefore, it will be used in this 
 The array contains random numbers from 0-1 with the help of np.random.random() and then puts it inside the function wherein the Normalization computation occurs. It is then saved in a file named "X_normalized.npy" and will be loaded once the calculation is complete.
 The following information will be displayed as an output: the original matrix, the mean, the standard deviation, and the normalized matrix.
 
-Example:
+Code Snippet:
+
+![image](https://github.com/user-attachments/assets/86633479-79c3-4f1c-802a-0bbf82ec8b73)
+
+
+
+Example Outcome:
 
 ![image](https://github.com/user-attachments/assets/da43f8e1-91b8-4f57-bce7-26dbf7b11271)
 
@@ -18,6 +24,13 @@ Example:
 This matrix uses an np.arange function that will help input the following values from 1-100 then reshaping it into a 10x10 matrix by using array.reshape(10,10) and squaring it by using the exponential syntax. Now, the matrix will be put inside the function wherein the filtering takes place. The function
 will use indexing, it will index specifically the values which are divisibly by 3 using the modulus syntax. After the calculation is complete it will be saved as "div_by_3.npy". Provided is a demonstration of this result with the following display: the matrix values and the indexed values itself
 
-Result:
+Code Snippet:
+
+![image](https://github.com/user-attachments/assets/96998891-988c-4572-a93d-a19226392589)
+
+
+
+
+Result Outcome:
 
 ![image](https://github.com/user-attachments/assets/c8897e35-3787-4a71-9196-704a427fe66d)
