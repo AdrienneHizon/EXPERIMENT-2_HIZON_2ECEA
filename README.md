@@ -27,7 +27,30 @@ The following information will be displayed as an output: the original matrix, t
 
 Code Snippet:
 
-![image](https://github.com/user-attachments/assets/86633479-79c3-4f1c-802a-0bbf82ec8b73)
+```python
+import numpy as np
+
+# Creating a 5x5 array matrix inside a variable X with random numbers
+X = np.random.random((5,5))
+
+# Creating a Normalization function that normalizes an array based on their mean and standard deviation in the formula of: (array - mean)/(std)
+def Normalization(matrix):
+    normal = (matrix - np.mean(matrix))/np.std(matrix)
+    return normal
+    
+# Saving the value of the Normalization function as npy
+np.save("X_normalized.npy",Normalization(X))
+
+# Putting the loaded npy file inside the norm_matrix variable
+norm_matrix = np.load("X_normalized.npy")
+
+# Rounding off the standard deviation into 4 decimal places
+rounded_std = round(np.std(X),4)
+
+# Printing the informations: This will print the 5x5 matrix itself, the mean, the standard deviation, and the loaded npy file called "normalized_matrix.npy"
+print("The matrix is \n\n",X,"\n\nThe mean for overall matrix is",np.mean(X),"\nThe standard deviation for the matrix is",rounded_std,"\nTherefore, the normalized matrix is\n\n",norm_matrix)
+
+```
 
 
 
@@ -43,8 +66,29 @@ will use indexing, it will index specifically the values which are divisibly by 
 
 Code Snippet:
 
-![image](https://github.com/user-attachments/assets/96998891-988c-4572-a93d-a19226392589)
+```python
+import numpy as np
 
+# Create a matrix ranging from 1-100 that are squared
+matrix = np.arange(1,101,1)**2
+
+# Reshape the matrix into 10x10
+matrix = matrix.reshape(10,10)
+
+# Create a function that will get the all indices of the matrix that are divisible by 3
+def divisibility_by_3(array):
+    array = array[array%3 == 0]
+    return array
+
+# Saving the value of the divisibility_by_3 function as np
+np.save("div_by_3.npy",divisibility_by_3(matrix))
+
+# Putting the loaded npy file inside the div3_matrix variable
+div3_matrix = np.load("div_by_3.npy")
+
+# Printing the information: This will print the 10x10 matrix itself and the list of numbers that are divisible by 3
+print("The 10x10 matrix with all squared values from 1-100 is\n\n",matrix,"\n\nThe following numbers that are divisible by 3 are\n\n",div3_matrix)
+```
 
 
 
