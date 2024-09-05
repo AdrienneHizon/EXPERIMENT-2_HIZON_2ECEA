@@ -16,7 +16,7 @@ Example:
 
 # Problem 2: Divisible by 3 Problem
 This matrix uses an np.arange function that will help input the following values from 1-100 then reshaping it into a 10x10 matrix by using array.reshape(10,10) and squaring it by using the exponential syntax. Now, the matrix will be put inside the function wherein the filtering takes place. The function
-will use indexing, it will index specifically the values which are divisibly by 3 using the modulus syntax. Provided is a demonstration of this result with the following display: the matrix values and the indexed values itself
+will use indexing, it will index specifically the values which are divisibly by 3 using the modulus syntax. After the calculation is complete it will be saved as "div_by_3.npy". Provided is a demonstration of this result with the following display: the matrix values and the indexed values itself
 
 Result:
 
